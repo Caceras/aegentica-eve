@@ -1,3 +1,30 @@
+<!-- repo-card:start -->
+<p align="center"><img src=".github/repo-card/cover.jpg" alt="Ægentica: a private personal AI agent you run yourself" width="100%"></p>
+
+<h2><img src=".github/repo-card/logo.png" width="34" height="34" align="absmiddle" alt=""> Ægentica</h2>
+
+**A personal AI assistant you own and host yourself: one private agent for one person, used as an installable app on phone and desktop or through Telegram, that can chat, remember, run scheduled tasks and work with GitHub.**
+
+**Vision:** a calm, private AI environment that goes from a quick answer to longer, verified work across models, tools and devices, with every important action behind one approval step. It is the successor to the earlier sol0 project and builds on Vercel's eve agent framework instead of hand-building the platform (from `apps/templates/eve-template/docs/VISION.md`).
+
+| | |
+|---|---|
+| **Status** | Earlier home of Ægentica, kept for reference. The product lives in `apps/templates/eve-template`; the rest is the upstream [vercel/eve](https://github.com/vercel/eve) framework. The live app at aegentica.se is now built from a separate repo |
+| **Code quality** | ★★★★☆ 4/5. Real integrations, 17 regression test scripts plus a browser acceptance check in CI, and strict docs and design rules; tests are script-level rather than broad unit coverage |
+| **Size** | About 19,000 lines of own code on top of the eve framework, 17 test files |
+| **Stack** | Next.js App Router, eve agent runtime, AI SDK with OpenRouter or Vercel AI Gateway, better-auth, Drizzle with Postgres, Upstash Redis, web push, shadcn/ui, Docker |
+| **What works** | Streaming chat that resumes after a refresh, tool cards and approvals, model picker with encrypted keys, installable app with Android share target and notifications, long-term memory page, scheduled tasks and briefings, Telegram channel, GitHub tools, saved agent profiles, image library |
+| **Worth reusing** | `apps/templates/eve-template/lib/secure-settings.ts` encrypted settings store for API keys; `lib/model-catalog.ts` + `scripts/sync-model-catalogs.mjs` model catalogue sync for OpenRouter and AI Gateway; `scripts/qa-tour.mjs` screenshot tour of every page on phone and desktop |
+| **Renamed** | Was `eve-template` until 25 Nov 2026 |
+
+<p align="center">
+<img src=".github/repo-card/screenshot.jpg" width="72%" alt="Ægentica chat on desktop"> <img src=".github/repo-card/screenshot-mobile.jpg" width="22%" alt="Ægentica chat on a phone">
+</p>
+<p align="center"><sub>Image from this repo: apps/templates/eve-template/public/screenshots/</sub></p>
+<!-- repo-card:end -->
+
+---
+
 # Ægentica product fork
 
 ![Ægentica](./apps/templates/eve-template/public/aegentica.svg)
